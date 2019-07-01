@@ -1,0 +1,18 @@
+server:
+  port: 80
+spring:
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    content-type: text/html
+    mode: HTML5
+  mvc:
+    static-path-pattern: /static/**
+  application:
+    name: cis
+  datasource:
+    url: jdbc:mysql://192.168.71.101:3306/cis?characterEncoding=utf-8
+    username: yuyongtao
+    password: yuyongtao
