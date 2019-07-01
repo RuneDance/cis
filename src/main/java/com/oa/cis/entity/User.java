@@ -8,6 +8,9 @@ import lombok.Setter;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * 用户表
+ */
 @Getter
 @Setter
 @NoArgsConstructor

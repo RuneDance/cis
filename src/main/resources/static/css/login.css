@@ -1,0 +1,187 @@
+#canvas {
+    position: absolute;
+    z-index: -1;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    letter-spacing: 2.2px;
+    font-family: 'Open Sans', sans-serif;
+    background:#323232 url("/static/imgs/login-background.png") no-repeat;
+}
+
+#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    width: 300px;
+    height: 300px;
+}
+
+/*#login h1 {
+    color: #fff;
+    text-shadow: 0 0 10px;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 35px;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}*/
+
+#login img{
+    height: 81px;
+    width: auto;
+    padding-left: 31px;
+}
+
+.validatebox-invalid {
+    color: #000;
+    font-size: 14px;
+    letter-spacing: 2.1px;
+    border-color: #f2f2f2;
+    background-color: #f7f7f7;
+}
+
+.btn-login:hover {
+    color: #fff;
+    background: #5f7ed7;
+    text-shadow: #4f70b3 0 -1px 0;
+    box-shadow: inset 0 1px 2px #7ea1e8;
+    background: linear-gradient(#7da8fd, #023bb1);
+}
+
+input {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0 auto 10px auto;
+    border: 1px solid #444 !important;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Cabin', helvetica, arial, sans-serif;
+    font-weight: 400;
+    display: block;
+    text-align: center;
+    background: #222;
+    background: -webkit-linear-gradient(#333, #222);
+    background: -moz-linear-gradient(#333, #222);
+    background: -o-linear-gradient(#333, #222);
+    background: -ms-linear-gradient(#333, #222);
+    background: linear-gradient(#333, #222);
+    width: 278px;
+    caret-color: #02ff1e;
+}
+
+input:focus {
+    -webkit-animation: glow 800ms ease-out infinite alternate;
+    -moz-animation: glow 800ms ease-out infinite alternate;
+    -o-animation: glow 800ms ease-out infinite alternate;
+    -ms-animation: glow 800ms ease-out infinite alternate;
+    animation: glow 800ms ease-out infinite alternate;
+    background: #222922;
+    background: -webkit-linear-gradient(#333933, #222922);
+    background: -moz-linear-gradient(#333933, #222922);
+    background: -o-linear-gradient(#333933, #222922);
+    background: -ms-linear-gradient(#333933, #222922);
+    background: linear-gradient(#333933, #222922);
+    border-color: #393;
+    box-shadow: 0 0 5px rgba(0, 255, 0, .2), inset 0 0 5px rgba(0, 255, 0, .1), 0 2px 0 #000;
+    outline: none;
+    width: 278px;
+}
+
+.btn-login {
+    width: 300px;
+    min-height: 20px;
+    display: block;
+    background: linear-gradient(#6884bf, #204190);
+    border: 1px solid #3762bc;
+    color: #c1c1c1;
+    padding: 9px 14px;
+    font-size: 15px;
+    line-height: normal;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.btn-login:focus {
+    outline: none;
+}
+
+.log-tip {
+    height: 43px;
+}
+
+.tip {
+    color: red;
+    border: 1px solid #a2a2a2;
+    border-radius: 4px;
+    padding: 6.5px 5px;
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: 17px;
+    background-color: #000000;
+}
+
+/*start*/
+@-webkit-keyframes glow {
+    0% {
+        border-color: #393;
+        box-shadow: 0 0 5px rgba(0, 255, 0, .2), inset 0 0 5px rgba(0, 255, 0, .1), 0 2px 0 #000;
+    }
+    100% {
+        border-color: #6f6;
+        box-shadow: 0 0 20px rgba(0, 255, 0, .6), inset 0 0 10px rgba(0, 255, 0, .4), 0 2px 0 #000;
+    }
+}
+
+@-moz-keyframes glow {
+    0% {
+        border-color: #393;
+        box-shadow: 0 0 5px rgba(0, 255, 0, .2), inset 0 0 5px rgba(0, 255, 0, .1), 0 2px 0 #000;
+    }
+    100% {
+        border-color: #6f6;
+        box-shadow: 0 0 20px rgba(0, 255, 0, .6), inset 0 0 10px rgba(0, 255, 0, .4), 0 2px 0 #000;
+    }
+}
+
+@-o-keyframes glow {
+    0% {
+        border-color: #393;
+        box-shadow: 0 0 5px rgba(0, 255, 0, .2), inset 0 0 5px rgba(0, 255, 0, .1), 0 2px 0 #000;
+    }
+    100% {
+        border-color: #6f6;
+        box-shadow: 0 0 20px rgba(0, 255, 0, .6), inset 0 0 10px rgba(0, 255, 0, .4), 0 2px 0 #000;
+    }
+}
+
+@-ms-keyframes glow {
+    0% {
+        border-color: #393;
+        box-shadow: 0 0 5px rgba(0, 255, 0, .2), inset 0 0 5px rgba(0, 255, 0, .1), 0 2px 0 #000;
+    }
+    100% {
+        border-color: #6f6;
+        box-shadow: 0 0 20px rgba(0, 255, 0, .6), inset 0 0 10px rgba(0, 255, 0, .4), 0 2px 0 #000;
+    }
+}
+
+@keyframes glow {
+    0% {
+        border-color: #393;
+        box-shadow: 0 0 5px rgba(0, 255, 0, .2), inset 0 0 5px rgba(0, 255, 0, .1), 0 2px 0 #000;
+    }
+    100% {
+        border-color: #6f6;
+        box-shadow: 0 0 20px rgba(0, 255, 0, .6), inset 0 0 10px rgba(0, 255, 0, .4), 0 2px 0 #000;
+    }
+}
+
+/*end*/
