@@ -64,13 +64,14 @@ $(document).ready(function () {
             type: "POST",
             url: "/regist",
             dataType: "JSON",
-            data: {
+            contentType: "application/json;charset=utf-8",
+            data: JSON.stringify({
                 username: username,
                 password: password,
                 sex: sex,
                 phone: phone,
                 email: email
-            },
+            }),
             beforeSend: function () {
                 MaskUtil.mask();
             },

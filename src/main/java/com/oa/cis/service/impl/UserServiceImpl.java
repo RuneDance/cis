@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     @Override
-    public JSONObject insertUserInfo(@RequestParam("userVo") UserVo userVo) {
+    public JSONObject insertUserInfo(UserVo userVo) {
         Integer result = userMapper.insertUserInfo(userVo);
         JSONObject jsonObj = new JSONObject();
         if (result > 0) {
