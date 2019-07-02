@@ -1,14 +1,14 @@
 package com.oa.cis.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.oa.cis.dao.UserMapper;
+import com.oa.cis.mapper.UserMapper;
 import com.oa.cis.service.UserService;
 import com.oa.cis.util.EncryptionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@Service(value = "userService")
+@Service("userService")
 public class UserServiceImpl implements UserService {
 
     @Autowired

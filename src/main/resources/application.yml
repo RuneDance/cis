@@ -4,12 +4,12 @@ spring:
   application:
     name: cis
   thymeleaf:
+    mode: HTML5
     cache: false
-    prefix: classpath:/templates/
     suffix: .html
     encoding: UTF-8
     content-type: text/html
-    mode: HTML5
+    prefix: classpath:/templates/
   mvc:
     static-path-pattern: /static/**
   datasource:
@@ -17,6 +17,8 @@ spring:
     url: jdbc:mysql://192.168.71.101:3306/cis?characterEncoding=utf-8
     username: yuyongtao
     password: yuyongtao
-    
+mybatis:
+  typeAliasesPackage: com.oa.cis.entity
+  mapperLocations: classpath:mapper/*.xml
 logging:
   file: cis.log

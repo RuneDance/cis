@@ -1,7 +1,11 @@
-package com.oa.cis.dao;
+package com.oa.cis.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
+@Mapper
 public interface UserMapper {
 
 

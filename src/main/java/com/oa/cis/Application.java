@@ -5,8 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
+@MapperScan("com.oa.cis.mapper")
 @SpringBootApplication
-@MapperScan(value="com.oa.cis.dao")
 public class Application {
 
     public static void main(String[] args) {
