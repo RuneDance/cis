@@ -17,4 +17,19 @@ public class InitController {
         }
         return new ModelAndView("/login");
     }
+
+    @RequestMapping("/index")
+    public ModelAndView index() {
+        return new ModelAndView("/index");
+    }
+
+    @RequestMapping("/login")
+    public ModelAndView login() {
+        return new ModelAndView("/login");
+    }
+
+    @RequestMapping("/regist")
+    public ModelAndView regist() {
+        return new ModelAndView("/regist");
+    }
 }

@@ -6,7 +6,6 @@ import com.oa.cis.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -27,7 +26,7 @@ public class UserController {
      */
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     @ResponseBody
-    public JSONObject login(@RequestParam("username") String username, @RequestParam("password") String password, HttpSession session, HttpServletRequest request) {
+    public JSONObject login(@RequestParam("username") String username, @RequestParam("password") String password, HttpSession session) {
         JSONObject jsonObject = userService.selectUserameAndPassWord(username, password);
         if (jsonObject.getString("code").equals("1")) {
             //将用户名保存在session中
