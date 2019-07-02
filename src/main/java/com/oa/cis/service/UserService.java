@@ -1,6 +1,7 @@
 package com.oa.cis.service;
 
 import com.alibaba.fastjson.JSONObject;
+import com.oa.cis.vo.UserVo;
 
 public interface UserService {
     /**
@@ -11,4 +12,13 @@ public interface UserService {
      * @return
      */
     JSONObject selectUserameAndPassWord(String username, String password);
+
+    /**
+     * 用户注册
+     *
+     * @param userVo
+     * @return
+     */
+    JSONObject insertUserInfo(UserVo userVo);
+
 }

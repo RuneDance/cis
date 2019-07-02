@@ -1,5 +1,6 @@
 package com.oa.cis.mapper;
 
+import com.oa.cis.vo.UserVo;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -17,5 +18,13 @@ public interface UserMapper {
      * @return
      */
     Integer selectUserameAndPassWord(@Param("username") String username, @Param("password") String password);
+
+    /**
+     * 用户注册
+     *
+     * @param userVo
+     * @return
+     */
+    Integer insertUserInfo(@Param("userVo") UserVo userVo);
 
 }

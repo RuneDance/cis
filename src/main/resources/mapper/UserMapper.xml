@@ -21,4 +21,14 @@
         WHERE cu.username = #{username,jdbcType=VARCHAR} AND cu.password = #{password,jdbcType=VARCHAR}
     </select>
 
+    <!-- 用户注册 -->
+    <insert id="insertUserInfo" parameterType="com.oa.cis.vo.UserVo">
+        insert into cis_user cu
+        (cu.username,cu.password,cu.sex,cu.phone,cu.email,cu.role,cu.create_time,cu.update_time)
+        values
+        (#{username,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR},
+        #{sex,jdbcType=VARCHAR},#{phone,jdbcType=VARCHAR},
+        #{email,jdbcType=VARCHAR},#{role,jdbcType=VARCHAR},
+        #{createTime,jdbcType=TIMESTAMP},#{updateTime,jdbcType=TIMESTAMP})
+    </insert>
 </mapper>

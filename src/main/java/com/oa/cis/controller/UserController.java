@@ -3,10 +3,14 @@ package com.oa.cis.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.oa.cis.constants.UserConstants;
 import com.oa.cis.service.UserService;
+import com.oa.cis.util.EncryptionUtils;
+import com.oa.cis.vo.UserVo;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.Date;
 
 /**
  * 用户Controller
@@ -36,5 +40,23 @@ public class UserController {
         return jsonObject;
     }
 
+    /**
+     * 用户注册
+     *
+     * @param userVo
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/regist", method = RequestMethod.POST)
+    @ResponseBody
+    public JSONObject regist(@RequestParam("userVo") UserVo userVo, HttpServletRequest request) {
+        /* MD5+SHA-512 加密*/
+        userVo.setPassword(EncryptionUtils.encryption(userVo.getPassword()));
+        userVo.setRole(1);
+        userVo.setCreateTime(new Date());
+        userVo.setUpdateTime(new Date());
+        JSONObject jsonObject = userService.insertUserInfo(userVo);
+        return jsonObject;
+    }
 
 }

@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.oa.cis.mapper.UserMapper;
 import com.oa.cis.service.UserService;
 import com.oa.cis.util.EncryptionUtils;
+import com.oa.cis.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -34,6 +35,26 @@ public class UserServiceImpl implements UserService {
         }
         jsonObj.put("code", "0");
         jsonObj.put("msg", "用户名或密码不正确");
+        return jsonObj;
+    }
+
+    /**
+     * 用户注册
+     *
+     * @param userVo
+     * @return
+     */
+    @Override
+    public JSONObject insertUserInfo(@RequestParam("userVo") UserVo userVo) {
+        Integer result = userMapper.insertUserInfo(userVo);
+        JSONObject jsonObj = new JSONObject();
+        if (result > 0) {
+            jsonObj.put("code", "1");
+            jsonObj.put("msg", "注册成功");
+            return jsonObj;
+        }
+        jsonObj.put("code", "0");
+        jsonObj.put("msg", "用户注册失败");
         return jsonObj;
     }
 }
