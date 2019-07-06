@@ -1,0 +1,60 @@
+body {
+    font-family: Helvetica Neue, Helvetica, PingFang SC,
+    \5FAE\8F6F\96C5\9ED1, Tahoma, Arial, sans-serif;
+}
+
+#login {
+    color: #606060;
+    border-bottom: 3.5px solid #222;
+    margin-bottom: 1.3px;
+}
+
+#log {
+    color: #606060;
+    border-bottom: 3.5px solid #222;
+    margin-bottom: 1.3px;
+}
+
+#reg {
+    color: #606060;
+    border-bottom: 3.5px solid #222;
+    margin-bottom: 1.3px;
+}
+
+#regist {
+    color: #606060;
+    border-bottom: 3.5px solid #222;
+    margin-bottom: 1.3px;
+}
+
+#login:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+    border-bottom: 3.5px solid #FFFFFF;
+    transition: 1250ms ease all;
+}
+
+#log:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+    border-bottom: 3.5px solid #FFFFFF;
+    transition: 1250ms ease all;
+}
+
+#reg:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+    border-bottom: 3.5px solid #FFFFFF;
+    transition: 1250ms ease all;
+}
+
+#regist:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+    border-bottom: 3.5px solid #FFFFFF;
+    transition: 1250ms ease all;
+}
+
+#logo{
+    color: #fff;
+}

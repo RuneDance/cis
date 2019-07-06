@@ -2,9 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <title>Title</title>
+    <title>首页</title>
+    <!--index.css-->
+    <link rel="stylesheet" href="../static/css/index.css"/>
+    <!-- bootstrap.min.css -->
+    <link rel="stylesheet" href="../static/plugins/css/bootstrap.min.css"/>
+    <!-- font-awesome.min.css -->
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+    <!--index.js-->
+    <script src="../static/js/index.js"></script>
+    <!-- jquery.min.js -->
+    <script src="../static/js/common/jquery.min.js"></script>
+    <!-- bootstrap.min.js -->
+    <script src="../static/plugins/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-<h3>Hello World</h3>
+<!--<input id="sessionId" type="hidden" value="<%=sname%>"/>-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="logo">
+                <!--<img id="fslogo" class="img-responsive" src="indexresource/img/flowingsand.gif" alt=""/>-->
+                <h3>CIS</h3>
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="page-scroll">
+                    <a id="login" href="login.html">
+                        <span class="glyphicon glyphicon-home btn-xs"> <strong> 登录</strong></span>
+                    </a>
+                </li>
+                <li class="page-scroll">
+                    <a id="regist" href="regist.html">
+                        <span class="glyphicon glyphicon-hand-right btn-xs"> <strong> 注册</strong></span>
+                    </a>
+                </li>
+                <!--<li class="page-scroll">
+                    <a id="regist" href="regist.html">
+                        <span class="glyphicon glyphicon-hand-right btn-xs"> <strong> 注册</strong></span>
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
 </body>
 </html>
