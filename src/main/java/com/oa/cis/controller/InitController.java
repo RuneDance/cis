@@ -39,16 +39,6 @@ public class InitController {
     }
 
     /**
-     * 错误
-     *
-     * @return
-     */
-    @RequestMapping("/errors")
-    public ModelAndView errors() {
-        return new ModelAndView("/errors");
-    }
-
-    /**
      * 登录
      *
      * @return
@@ -95,11 +85,11 @@ public class InitController {
      */
     @RequestMapping("/formInfoDetail")
     public ModelAndView formInfoDetail(HttpSession session) {
-        HttpSession httpSession = (HttpSession) session.getAttribute(UserConstants.SESSION_USERNAME);
-        if (httpSession != null) {
-            if (httpSession.toString().equals("admin")) {
+        if (session.getAttribute(UserConstants.SESSION_USERNAME) != null) {
+            if (session.getAttribute(UserConstants.SESSION_USERNAME).toString().equals("admin")) {
                 return new ModelAndView("/formInfoDetail");
             }
+            return new ModelAndView("/index");
         }
         return new ModelAndView("/login");
 
