@@ -27,4 +27,19 @@ public interface UserMapper {
      */
     Integer insertUserInfo(UserVo userVo);
 
+    /**
+     * 根据用户名查询密码
+     *
+     * @param username
+     * @return
+     */
+    String selectPasswordByUsername(@Param("username") String username);
+
+    /**
+     * 根据用户名修改密码
+     *
+     * @param username
+     * @return
+     */
+    Integer updatePasswordByUsername(@Param("username") String username, @Param("password") String password);
 }

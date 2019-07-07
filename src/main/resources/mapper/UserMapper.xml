@@ -21,6 +21,13 @@
         WHERE cu.username = #{username,jdbcType=VARCHAR} AND cu.password = #{password,jdbcType=VARCHAR}
     </select>
 
+    <!--根据用户名查询密码-->
+    <select id="selectPasswordByUsername" resultType="string" parameterType="string">
+        SELECT cu.password
+        FROM cis_user cu
+        WHERE cu.username = #{username,jdbcType=VARCHAR}
+    </select>
+
     <!-- 用户注册 -->
     <insert id="insertUserInfo" parameterType="com.oa.cis.vo.UserVo">
         insert into cis_user (username,password,sex,phone,email,role,create_time,update_time)
@@ -30,4 +37,12 @@
         #{email,jdbcType=VARCHAR},#{role,jdbcType=VARCHAR},
         #{createTime,jdbcType=TIMESTAMP},#{updateTime,jdbcType=TIMESTAMP})
     </insert>
+
+
+    <!--根据用户名修改密码-->
+    <update id="updatePasswordByUsername" parameterType="string">
+        update cis_user
+        set password = #{password,jdbcType=VARCHAR}
+        where username = #{username,jdbcType=INTEGER}
+    </update>
 </mapper>

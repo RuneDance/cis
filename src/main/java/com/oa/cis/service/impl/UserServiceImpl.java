@@ -57,4 +57,27 @@ public class UserServiceImpl implements UserService {
         jsonObj.put("msg", "用户注册失败");
         return jsonObj;
     }
+
+    /**
+     * 修改密码
+     *
+     * @param username
+     * @param password
+     * @return
+     */
+    @Override
+    public Integer updatePasswordByUsername(String username, String password) {
+        return userMapper.updatePasswordByUsername(username, password);
+    }
+
+    /**
+     * 根据用户名查询密码
+     *
+     * @param username
+     * @return
+     */
+    @Override
+    public String selectPasswordByUsername(String username) {
+        return userMapper.selectPasswordByUsername(username);
+    }
 }

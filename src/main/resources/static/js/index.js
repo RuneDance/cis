@@ -194,7 +194,7 @@ function resetPassword() {
                 $.ajax({
                     async: false,
                     type: "POST",
-                    url: "reset_password.action",
+                    url: "/resetPassword",
                     dataType: "text", // 预期服务器返回的数据类型
                     data: {
                         oldPassword: $.trim($("#old_pwd").val()),

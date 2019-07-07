@@ -92,4 +92,32 @@ public class UserController {
         session.removeAttribute(UserConstants.SESSION_USERNAME);
     }
 
+    /**
+     * 修改密码
+     *
+     * @param oldPassword
+     * @param newPassword
+     * @param session
+     * @return
+     */
+    @RequestMapping(value = "/resetPassword", method = RequestMethod.POST)
+    @ResponseBody
+    public String resetPassword(@RequestParam String oldPassword, @RequestParam String newPassword, HttpSession session) {
+        if (session.getAttribute(UserConstants.SESSION_USERNAME) != null) {
+            String name = session.getAttribute(UserConstants.SESSION_USERNAME).toString();
+            //获取旧密码
+            String oldPwd = userService.selectPasswordByUsername(name);
+            if (!oldPwd.equals(EncryptionUtils.encryption(oldPassword))) {
+                return "1";
+            }
+            //重置密码
+            Integer result = userService.updatePasswordByUsername(name, EncryptionUtils.encryption(newPassword));
+            if (result > 0) {
+                return "0";
+            }
+            return "2";
+        }
+        return "2";
+    }
+
 }
