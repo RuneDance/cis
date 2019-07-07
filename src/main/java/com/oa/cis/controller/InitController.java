@@ -32,4 +32,15 @@ public class InitController {
     public ModelAndView regist() {
         return new ModelAndView("/regist");
     }
+
+    @RequestMapping("/demo")
+    public ModelAndView demo() {
+        return new ModelAndView("/demo");
+    }
+
+    @RequestMapping("/home")
+    public ModelAndView home() {
+        return new ModelAndView("/home");
+    }
+
 }

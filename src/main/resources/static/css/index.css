@@ -1,60 +1,107 @@
-body {
-    font-family: Helvetica Neue, Helvetica, PingFang SC,
-    \5FAE\8F6F\96C5\9ED1, Tahoma, Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-#login {
-    color: #606060;
-    border-bottom: 3.5px solid #222;
-    margin-bottom: 1.3px;
+.west {
+    width: 15%;
 }
 
-#log {
-    color: #606060;
-    border-bottom: 3.5px solid #222;
-    margin-bottom: 1.3px;
+.west .trees li a {
+    color: #000;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-decoration: none;
 }
 
-#reg {
-    color: #606060;
-    border-bottom: 3.5px solid #222;
-    margin-bottom: 1.3px;
+.north {
+    height: 55px;
+    background-color: #0280c2;
 }
 
-#regist {
-    color: #606060;
-    border-bottom: 3.5px solid #222;
-    margin-bottom: 1.3px;
+.south {
+    height: 32px;
+    color: #909090;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 7.3px;
+    border-color: #dfdfdf;
+    background-color: #f5f5f5;
 }
 
-#login:hover {
-    cursor: pointer;
-    color: #FFFFFF;
-    border-bottom: 3.5px solid #FFFFFF;
-    transition: 1250ms ease all;
+.center {
+    padding: 5px;
+    background: #eee;
 }
 
-#log:hover {
-    cursor: pointer;
-    color: #FFFFFF;
-    border-bottom: 3.5px solid #FFFFFF;
-    transition: 1250ms ease all;
+.easyui-accordion {
+    width: 100%;
+    height: 100%;
 }
 
-#reg:hover {
-    cursor: pointer;
-    color: #FFFFFF;
-    border-bottom: 3.5px solid #FFFFFF;
-    transition: 1250ms ease all;
+.easyui-accordion div ul li {
+    display: block;
 }
 
-#regist:hover {
-    cursor: pointer;
-    color: #FFFFFF;
-    border-bottom: 3.5px solid #FFFFFF;
-    transition: 1250ms ease all;
+.north-left {
+    float: left;
+    padding-top: 3px;
 }
 
-#logo{
+.north-left h2 {
+    color: #000;
+    padding-top: 9px;
+    padding-left: 15px;
+}
+
+.north-left h1 {
     color: #fff;
+    cursor: pointer;
+    text-shadow: 0 0 10px;
+}
+
+.north-right {
+    color: #fff;
+    float: right;
+    font-size: 13px;
+    padding-top: 4px;
+    text-align: right;
+}
+
+.north-right p {
+    line-height: 1.5em;
+}
+
+.north-right .welcome {
+    padding-right: 3px;
+}
+
+.north-right .options {
+    padding-top: 3px;
+    padding-right: 3px;
+}
+
+.north-right .options a {
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #0280c2;
+}
+
+.north-right .options a:hover {
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid #e2e2e2;
+    background-color: #0280c2;
+}
+
+#tabs {
+    border-radius: 8px;
+    background-color: #d4d4d4;
+    border: 1px solid #fafafa;
+}
+
+.panel-body {
+    overflow: hidden;
 }

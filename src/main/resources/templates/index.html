@@ -3,60 +3,89 @@
 <head>
     <meta charset="UTF-8"/>
     <title>首页</title>
-    <!--index.css-->
-    <link rel="stylesheet" href="../static/css/index.css"/>
-    <!-- bootstrap.min.css -->
-    <link rel="stylesheet" href="../static/plugins/css/bootstrap.min.css"/>
-    <!-- font-awesome.min.css -->
-    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 
-    <!--index.js-->
-    <script src="../static/js/index.js"></script>
-    <!-- jquery.min.js -->
-    <script src="../static/js/common/jquery.min.js"></script>
-    <!-- bootstrap.min.js -->
-    <script src="../static/plugins/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/themes/color.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/common/icon.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/themes/material-teal/easyui.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css"/>
+
+    <script type="text/javascript" src="../static/js/common/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/common/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../static/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="../static/js/index.js"></script>
 
 </head>
 <body>
-<!--<input id="sessionId" type="hidden" value="<%=sname%>"/>-->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" id="logo">
-                <!--<img id="fslogo" class="img-responsive" src="indexresource/img/flowingsand.gif" alt=""/>-->
-                <h3>CIS</h3>
-            </a>
-        </div>
+<body class="easyui-layout">
+<div data-options="region:'north',split:true,collapsible:false,border:false" class="north">
+    <div class="north-left">
+        <!--<img src="../static/imgs/index.png" height="46" width="auto"/>-->
+        <h2>CIS</h2>
+    </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="page-scroll">
-                    <a id="login" href="login.html">
-                        <span class="glyphicon glyphicon-home btn-xs"> <strong> 登录</strong></span>
-                    </a>
-                </li>
-                <li class="page-scroll">
-                    <a id="regist" href="regist.html">
-                        <span class="glyphicon glyphicon-hand-right btn-xs"> <strong> 注册</strong></span>
-                    </a>
-                </li>
-                <!--<li class="page-scroll">
-                    <a id="regist" href="regist.html">
-                        <span class="glyphicon glyphicon-hand-right btn-xs"> <strong> 注册</strong></span>
-                        <i class="fa fa-sign-out" aria-hidden="true"></i>
-                    </a>
-                </li>-->
+    <div class="north-right">
+        <p class="welcome"><strong>x xx</strong>，欢迎您！</p>
+        <p class="options"><a onclick="resetPassword()">修改密码</a>|<a onclick="exit()">安全退出</a>|<a onclick="about()">关于系统</a></p>
+    </div>
+
+</div>
+
+<div data-options="region:'south',split:true,collapsible:true,border:true" class="south">
+    &copy; 2018 All Rights Reserved
+</div>
+
+<div data-options="region:'west',title:'导航菜单',iconCls:'icon-large-clipart',split:true,border:true" class="west">
+    <div class="easyui-accordion" data-options="split:true,fit:true,border:false">
+
+        <div title="&nbsp;&nbsp;页面管理" data-options="iconCls:'icon-table-multiple'" style="overflow:auto;padding:10px;">
+            <ul class="easyui-tree trees" data-options="animate:true">
+                <li iconCls="icon-building"><a href="javascript:void(0)" data-icon="icon-building" data-link="/home.html" iframe="1">首页</a></li>
+                <!--<li iconCls="icon-building"><a href="javascript:void(0)" data-icon="icon-building" data-link="/financialManagementNoCash.html" iframe="1">理财还款未兑付</a></li>
+                <li iconCls="icon-application-view-detail"><a href="javascript:void(0)" data-icon="icon-application-view-detail" data-link="/repaymentBalanceAccountDetail.html" iframe="1">还款对账明细</a></li>
+                <li iconCls="icon-application-view-detail"><a href="javascript:void(0)" data-icon="icon-application-view-detail" data-link="/cashBalanceAccountDetail.html" iframe="1">兑付对账明细</a></li>
+                <li iconCls="icon-building"><a href="javascript:void(0)" data-icon="icon-building" data-link="/userBalanceDetail.html" iframe="1">用户余额明细</a></li>
+                <li iconCls="icon-building"><a href="javascript:void(0)" data-icon="icon-building" data-link="/rechargeWithdrawCash.html" iframe="1">充值提现明细</a></li>
+                <li iconCls="icon-building"><a href="javascript:void(0)" data-icon="icon-building" data-link="/bidRecordDetail.html" iframe="1">投标记录明细</a></li>
+                <li iconCls="icon-building"><a href="javascript:void(0)" data-icon="icon-building" data-link="/loanRecordDetail.html" iframe="1">放款记录明细</a></li>
+                <li iconCls="icon-building"><a href="javascript:void(0)" data-icon="icon-building" data-link="/equitableAssignment.html" iframe="1">债权转让</a></li>
+                <li iconCls="icon-building"><a href="javascript:void(0)" data-icon="icon-building" data-link="/rebateRecord.html" iframe="1">返利记录</a></li>-->
             </ul>
         </div>
+
     </div>
-</nav>
+</div>
+
+<div data-options="region:'center',border:true" class="center">
+    <div id="tabs" class="easyui-tabs" data-options="border:false,fit:true">
+        <div id="menu" class="easyui-menu">
+            <div id="close-current" data-options="iconCls:'icon-cancel'">关闭当前</div>
+            <div id="close-other" data-options="iconCls:'icon-cancel'">关闭其他</div>
+            <div id="close-all" data-options="iconCls:'icon-delete3'">关闭所有</div>
+        </div>
+    </div>
+</div>
+
+
+<div id="reset-password-dialog" class="easyui-dialog" data-options="closed:true,iconCls:'icon-save,striped:true'">
+    <form method="post" id="form-reset-password">
+        <table>
+            <tr>
+                <td width="60" align="right" style="color: #afafaf;">旧密码:&nbsp;&nbsp;</td>
+                <td><input type="password" class="easyui-textbox" id="old_pwd" required="required" data-options="validType:'old_pwd'"/></td>
+            </tr>
+
+            <tr>
+                <td align="right" style="color: #000;">新密码:&nbsp;&nbsp;</td>
+                <td><input type="password" class="easyui-textbox" id="new_pwd" required="required" data-options="validType:'new_pwd'"/></td>
+            </tr>
+            <tr>
+                <td align="right" style="color: #000;">新密码:&nbsp;&nbsp;</td>
+                <td><input type="password" class="easyui-textbox" id="again_new_pwd" required="required" data-options="validType:'again_new_pwd'"/></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
 </body>
 </html>
