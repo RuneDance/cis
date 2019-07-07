@@ -39,6 +39,16 @@ public class InitController {
     }
 
     /**
+     * errors
+     *
+     * @return
+     */
+    @RequestMapping("/errors")
+    public ModelAndView errors() {
+        return new ModelAndView("/errors");
+    }
+
+    /**
      * 登录
      *
      * @return

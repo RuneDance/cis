@@ -143,7 +143,7 @@ function getLoginUserName() {
             }
         },
         error: function () {
-            window.location.href = "error.html";
+            window.location.href = "errors.html";
         }
     });
 }
@@ -160,7 +160,7 @@ function logout() {
             window.location.href = "login.html";
         },
         error: function () {
-            window.location.href = "error.html";
+            window.location.href = "errors.html";
         }
     });
 }
@@ -215,12 +215,12 @@ function resetPassword() {
                         } else if (data == "1") {
                             $.messager.alert('提示', '你所输入的旧密码有误！', 'info');
                         } else {
-                            window.location.href = "error.html";
+                            window.location.href = "errors.html";
                         }
 
                     },
                     error: function () {
-                        window.location.href = "error.html";
+                        window.location.href = "errors.html";
                     }
                 });
             }

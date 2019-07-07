@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
     <meta charset="UTF-8"/>
     <title>错误</title>
 
     <link rel="stylesheet" type="text/css" href="../static/themes/bootstrap/easyui.css"/>
     <link rel="stylesheet" type="text/css" href="../static/themes/icon.css"/>
-    <link rel="stylesheet" type="text/css" href="../static/css/error.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/errors.css"/>
 
     <script type="text/javascript" src="../static/js/common/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../static/js/common/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="../static/locale/easyui-lang-zh_CN.js"></script>
-    <script type="text/javascript" src="../static/js/error.js"></script>
+    <script type="text/javascript" src="../static/js/errors.js"></script>
 
 </head>
 <body>
 <div class="error">
-    <div class="error_left"><a onclick="index()"><img src="../static/imgs/mark.png" /></a></div>
+    <div class="error_left"><a onclick="index()"><img src="../static/imgs/mark.png"/></a></div>
     <div class="error_right">
         <h1>服务器异常！</h1>
-        <ul th:object="${errorInfo}">
+        <!--<ul th:object="${errorInfo}">
             <li th:text="*{'发生时间：'+time}"></li>
             <li th:text="*{'访问地址：'+url}"></li>
             <li th:text="*{'问题类型：'+error}"></li>
             <li th:text="*{'通信状态：'+statusCode+','+reasonPhrase}"></li>
             <li th:text="*{'堆栈信息：'+stackTrace}"></li>
             <li class="return">点击这里回到 <a href="#" onclick="index()">首页</a>，您可以找到更多！</li>
-        </ul>
+        </ul>-->
     </div>
 </div>
 </body>

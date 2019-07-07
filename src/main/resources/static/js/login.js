@@ -55,7 +55,7 @@ $(document).ready(function () {
                 MaskUtil.unmask();
             },
             error: function (data) {
-                window.location.href = "error.html";
+                window.location.href = "errors.html";
             }
         });
     });
