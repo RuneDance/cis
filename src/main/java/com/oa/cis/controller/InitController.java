@@ -19,8 +19,11 @@ public class InitController {
     }
 
     @RequestMapping("/index")
-    public ModelAndView index() {
-        return new ModelAndView("/index");
+    public ModelAndView index(HttpSession session) {
+        if (session.getAttribute(UserConstants.SESSION_USERNAME) != null) {
+            return new ModelAndView("/index");
+        }
+        return new ModelAndView("/login");
     }
 
     @RequestMapping("/login")

@@ -65,4 +65,31 @@ public class UserController {
         return jsonObject;
     }
 
+    /**
+     * 获取登录用户名
+     *
+     * @param session
+     * @return
+     */
+    @RequestMapping(value = "/getUserName", method = RequestMethod.POST)
+    @ResponseBody
+    public String getUserName(HttpSession session) {
+        if (session.getAttribute(UserConstants.SESSION_USERNAME) != null) {
+            return session.getAttribute(UserConstants.SESSION_USERNAME).toString();
+        }
+        return null;
+    }
+
+    /**
+     * 退出登录
+     *
+     * @param session
+     */
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    @ResponseBody
+    public void logout(HttpSession session) {
+        //删除session中的用户名
+        session.removeAttribute(UserConstants.SESSION_USERNAME);
+    }
+
 }

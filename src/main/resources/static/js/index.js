@@ -8,7 +8,7 @@ $(function () {
         addTab(title, url, iconCls, iframe);
     });
 
-    //getLoginUserName();
+    getLoginUserName();
 
     $.extend($.fn.validatebox.defaults.rules, {
         old_pwd: {
@@ -130,22 +130,15 @@ function getLoginUserName() {
     $.ajax({
         async: false,
         type: "POST",
-        url: "refresh.action",
+        url: "/getUserName",
         dataType: "text",
         success: function (data) {
             if (data != "") {
                 if (data == "admin") {
-                    //$('#user-manage').show();
                     $('div#user-manage ul:first').show();
                 } else {
-                    //$('#user-manage').hide();
                     $('div#user-manage ul:first').hide();
                 }
-                /*if(data == "admin"){
-                 $('#navigation-menu').append("<div title='用户管理' data-options='iconCls:'icon-users'' style='padding:5px;' id='user-manage'><ul class='easyui-tree wu-side-tree'><li iconCls='icon-chart-organisation'><a href='javascript:void(0)' data-icon='icon-chart-organisation' data-link='/user.html' iframe='1'>用户管理</a></li> </ul></div>");
-                 }else{
-                 $('#user-manage').remove();
-                 }*/
                 $(".north-right p strong").text(data);
             }
         },
@@ -161,8 +154,8 @@ function getLoginUserName() {
 function logout() {
     $.ajax({
         async: false,
-        type: "POST",
-        url: "logout.action",
+        type: "GET",
+        url: "/logout",
         success: function () {
             window.location.href = "login.html";
         },
