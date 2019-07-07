@@ -43,4 +43,13 @@ public class InitController {
         return new ModelAndView("/home");
     }
 
+    @RequestMapping("/formApply")
+    public ModelAndView formApply() {
+        return new ModelAndView("/formApply");
+    }
+
+    @RequestMapping("/formInfoDetail")
+    public ModelAndView formInfoDetail() {
+        return new ModelAndView("/formInfoDetail");
+    }
 }

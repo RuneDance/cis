@@ -25,6 +25,6 @@ public interface UserMapper {
      * @param userVo
      * @return
      */
-    Integer insertUserInfo(@Param("userVo") UserVo userVo);
+    Integer insertUserInfo(UserVo userVo);
 
 }
