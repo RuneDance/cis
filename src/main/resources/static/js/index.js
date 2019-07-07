@@ -219,7 +219,7 @@ function resetPassword() {
                         }
 
                     },
-                    error: function (data) {
+                    error: function () {
                         window.location.href = "error.html";
                     }
                 });

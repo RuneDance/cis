@@ -1,0 +1,45 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #eeeeee;
+}
+
+.error {
+    height: 420px;
+    background: #fff;
+    border-radius: 5px;
+    margin: 100px 180px;
+    border: 1px solid #ffffff;
+}
+
+.error_left {
+    float: left;
+    padding-top: 90px;
+    padding-left: 130px;
+}
+
+.error_right {
+    color: #000;
+    padding-top: 90px;
+}
+
+.error_right ul {
+    list-style-type: none
+}
+
+.error_right ul li {
+    color: #fb2323;
+    font-size: 12px;
+    line-height: 2em;
+    letter-spacing: 1px;
+}
+
+.error_right ul .return {
+    color: #35a2f4;
+    font-weight: bold;
+}
+
+.error_right ul li a {
+    color: #fb2323;
+    font-size: 15px;
+}

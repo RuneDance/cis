@@ -10,6 +10,12 @@ import javax.servlet.http.HttpSession;
 
 @RestController
 public class InitController {
+    /**
+     * 默认首页
+     *
+     * @param session
+     * @return
+     */
     @RequestMapping("/")
     public ModelAndView init(HttpSession session) {
         if (session.getAttribute(UserConstants.SESSION_USERNAME) != null) {
@@ -18,6 +24,12 @@ public class InitController {
         return new ModelAndView("/login");
     }
 
+    /**
+     * 首页
+     *
+     * @param session
+     * @return
+     */
     @RequestMapping("/index")
     public ModelAndView index(HttpSession session) {
         if (session.getAttribute(UserConstants.SESSION_USERNAME) != null) {
@@ -26,33 +38,75 @@ public class InitController {
         return new ModelAndView("/login");
     }
 
+    /**
+     * 错误
+     *
+     * @return
+     */
+    @RequestMapping("/errors")
+    public ModelAndView errors() {
+        return new ModelAndView("/errors");
+    }
+
+    /**
+     * 登录
+     *
+     * @return
+     */
     @RequestMapping("/login")
     public ModelAndView login() {
         return new ModelAndView("/login");
     }
 
+    /**
+     * 注册
+     *
+     * @return
+     */
     @RequestMapping("/regist")
     public ModelAndView regist() {
         return new ModelAndView("/regist");
     }
 
-    @RequestMapping("/demo")
-    public ModelAndView demo() {
-        return new ModelAndView("/demo");
-    }
-
+    /**
+     * home 页面
+     *
+     * @return
+     */
     @RequestMapping("/home")
     public ModelAndView home() {
         return new ModelAndView("/home");
     }
 
+    /**
+     * 表单应用
+     *
+     * @return
+     */
     @RequestMapping("/formApply")
     public ModelAndView formApply() {
         return new ModelAndView("/formApply");
     }
 
+    /**
+     * 表单信息详情
+     *
+     * @return
+     */
     @RequestMapping("/formInfoDetail")
-    public ModelAndView formInfoDetail() {
-        return new ModelAndView("/formInfoDetail");
+    public ModelAndView formInfoDetail(HttpSession session) {
+        HttpSession httpSession = (HttpSession) session.getAttribute(UserConstants.SESSION_USERNAME);
+        if (httpSession != null) {
+            if (httpSession.toString().equals("admin")) {
+                return new ModelAndView("/formInfoDetail");
+            }
+        }
+        return new ModelAndView("/login");
+
+    }
+
+    @RequestMapping("/demo")
+    public ModelAndView demo() {
+        return new ModelAndView("/demo");
     }
 }
