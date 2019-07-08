@@ -9,6 +9,13 @@ import org.springframework.stereotype.Repository;
 @Mapper
 public interface UserMapper {
 
+    /**
+     * 根据用户名查询密码
+     *
+     * @param username
+     * @return
+     */
+    String selectPasswordByUsername(@Param("username") String username);
 
     /**
      * 根据用户名称和密码查询用户
@@ -27,13 +34,6 @@ public interface UserMapper {
      */
     Integer insertUserInfo(UserVo userVo);
 
-    /**
-     * 根据用户名查询密码
-     *
-     * @param username
-     * @return
-     */
-    String selectPasswordByUsername(@Param("username") String username);
 
     /**
      * 根据用户名修改密码

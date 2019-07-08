@@ -45,4 +45,5 @@
         set password = #{password,jdbcType=VARCHAR}
         where username = #{username,jdbcType=INTEGER}
     </update>
+
 </mapper>
