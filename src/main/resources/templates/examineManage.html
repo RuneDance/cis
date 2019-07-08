@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>审核页面</title>
+    <link rel="stylesheet" type="text/css" href="../static/themes/bootstrap/easyui.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/common/lodingtip.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/common/icon.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/examineManage.css"/>
+
+    <script type="text/javascript" src="../static/js/common/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/common/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../static/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="../static/js/common/lodingtip.js"></script>
+    <!--<script type="text/javascript" src="../static/js/home.js"></script>-->
+</head>
+<body>
+
+<div id="query-condition" class="easyui-panel panels">
+    <form method="post" id="loanQueryForm">
+        <h2>查询条件</h2>
+        <div class="search-input">
+            交易流水号:&nbsp;&nbsp;<input id="tradeSerialNum" class="easyui-textbox"
+                                     data-options="validType:'tradeSerialNum'"/>&nbsp;
+            对账结果:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select id="tradeResult" class="easyui-combobox easyui-select" data-options="editable:false">
+                <option value="1,2,3" selected="selected">对账失败</option>
+                <option value="0">对账成功</option>
+                <option value="1">交易错账</option>
+                <option value="2">交易少账</option>
+                <option value="3">交易多账</option>
+            </select>&nbsp;
+        </div>
+
+        <div class="search-input">
+            放款日期:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input id="loanStartDate" class="easyui-datebox" data-options="validType:'loanStartDate'"/>&nbsp;&nbsp;~&nbsp;&nbsp;
+            <input id="loanEndDate" class="easyui-datebox" data-options="validType:'loanEndDate'"/>
+        </div>
+
+        <div class="search-input">
+            标的编号:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="bidNo" class="easyui-textbox"
+                                                            data-options="validType:'bidNo'"/>
+        </div>
+
+    </form>
+
+    <div class="button">
+        <a id="loanQuery" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查询</a>
+        <a id="loanReset" class="easyui-linkbutton" data-options="iconCls:'icon-edit-clear'">重置</a>
+    </div>
+</div>
+
+<div id="query-result" class="easyui-panel panels">
+    <h2>历史表单信息</h2>
+    <table id="dg" class="easyui-datagrid"
+           data-options="fitColumns:true,rownumbers:true,singleSelect:true,autoRowHeight:false,pagination:true,pageSize:10">
+        <thead>
+        <tr>
+            <th field="id" width="100" align="center">编号</th>
+            <th field="tradeSerialNum" width="190" align="center" formatter="rowformater">Design Name</th>
+            <th field="tradeTime" width="150" align="center">Vendor Name</th>
+            <th field="bidNo" width="150" align="center">Vendor PN</th>
+            <th field="startBidSureAmt" width="150" align="center">申请人</th>
+            <th field="otherAccountType" width="150" align="center">审核人</th>
+            <th field="sxfAmt" width="150" align="center">审核状态</th>
+            <th field="dealResult" width="150" align="center">状态更新时间</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+
+</body>
+</html>

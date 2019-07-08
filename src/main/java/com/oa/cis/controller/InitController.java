@@ -105,6 +105,17 @@ public class InitController {
 
     }
 
+    /**
+     * 审核管理
+     *
+     * @return
+     */
+    @RequestMapping("/examineManage")
+    public ModelAndView examineManage() {
+        return new ModelAndView("/examineManage");
+    }
+
+
     @RequestMapping("/demo")
     public ModelAndView demo() {
         return new ModelAndView("/demo");

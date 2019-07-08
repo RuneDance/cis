@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.panels {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.time {
+    color: #b7b7b7;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.easyui-panel .search-input {
+    margin: 20px;
+}
+
+.easyui-panel .search-input input {
+    width: 300px;
+    height: 30px;
+}
+
+.easyui-panel .button {
+    float: right;
+    margin-right: 9%;
+}
+
+.easyui-panel .button a {
+    width: 90px;
+    margin-left: 15px;
+}
+
+.easyui-panel .button #add {
+    color: #000;
+    /*background: #2196F3;*/
+    background: linear-gradient(to bottom, #f7f7f7 0, #b1b1b1 100%);
+}
+
+.easyui-panel .button #add:hover {
+    color: #fff;
+    background: #b1b1b1;
+    /*background: linear-gradient(to bottom,#dadada 0,#2196F3 100%);*/
+}
+
+.easyui-select {
+    width: 304.5px;
+}
