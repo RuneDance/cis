@@ -111,10 +111,16 @@ public class InitController {
      * @return
      */
     @RequestMapping("/examineManage")
-    public ModelAndView examineManage() {
-        return new ModelAndView("/examineManage");
-    }
+    public ModelAndView examineManage(HttpSession session) {
+        if (session.getAttribute(UserConstants.SESSION_USERNAME) != null) {
+            if (session.getAttribute(UserConstants.SESSION_USERNAME).toString().equals("admin")) {
+                return new ModelAndView("/examineManage");
+            }
+            return new ModelAndView("/index");
+        }
+        return new ModelAndView("/login");
 
+    }
 
     @RequestMapping("/demo")
     public ModelAndView demo() {
